@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+</head>
+<body ng-app="starter">
+<ion-nav-bar class="bar-dark">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="secondary">
+        <button class="button-small button-clear" ui-sref="tab.footers">Tabs</button>
+        <button class="button-small button-clear" ui-sref="notabs">No Tabs</button>
+    </ion-nav-buttons>
+</ion-nav-bar>
+<ion-nav-view></ion-nav-view>
+
+<!-- No Tabs -->
+
+<script id="notabs.html" type="text/ng-template">
+    <ion-view view-title="No Tabs">
+        <ion-content>
+            <ul class="list">
+                <li class="item item-divider">Subheaders</li>
+                <li class="item" ui-sref="subheader-small">Small</li>
+                <li class="item" ui-sref="subheader-large">Large</li>
+                <li class="item item-divider">Footer</li>
+                <li class="item" ui-sref="footer-small">Small</li>
+                <li class="item" ui-sref="footer-large">Large</li>
+                <li class="item item-divider">Subfooter</li>
+                <li class="item" ui-sref="subfooter-small">Small</li>
+                <li class="item" ui-sref="subfooter-large">Large</li>
+            </ul>
+        </ion-content>
+</script>
+
+<!-- Subheaders -->
+
+<script id="subheader-small.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-header-bar class="bar-calm bar-subheader bar-subheader-small">
+            <h1 class="title">Small Subheader</h1>
+        </ion-header-bar>
+        <ion-content class="has-subheader-small">
+            <dummy-list></dummy-list>
+        </ion-content>
+    </ion-view>
+</script>
+
+<script id="subheader-large.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-header-bar class="bar-calm bar-subheader bar-subheader-large">
+            <h1 class="title">Large Subheader</h1>
+        </ion-header-bar>
+        <ion-content class="has-subheader-large">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-dark">
+            <h1 class="title">Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<!-- Footers -->
+
+<script id="footer-small.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-content class="has-footer-small">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-dark bar-footer-small">
+            <h1 class="title">Small Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<script id="footer-large.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-content class="has-footer-large">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-dark bar-footer-large">
+            <h1 class="title">Large Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<!-- Subfooters -->
+
+<script id="subfooter-small.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-content class="has-subfooter has-subfooter-small">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-balanced bar-subfooter bar-subfooter-small">
+            <h1 class="title">Small Subfooter</h1>
+        </ion-footer-bar>
+        <ion-footer-bar class="bar-dark">
+            <h1 class="title">Default Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<script id="subfooter-large.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-content class="has-subfooter has-subfooter-large">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-balanced bar-subfooter bar-subfooter-large">
+            <h1 class="title">Large Subfooter</h1>
+        </ion-footer-bar>
+        <ion-footer-bar class="bar-dark">
+            <h1 class="title">Default Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<!-- Combos -->
+
+<script id="footer-subfooter-default.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-content class="has-footer has-subfooter">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-balanced bar-subfooter">
+            <h1 class="title">Default Subfooter</h1>
+        </ion-footer-bar>
+        <ion-footer-bar class="bar-dark">
+            <h1 class="title">Default Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<script id="footer-subfooter-small.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-header-bar class="bar-calm bar-subheader bar-subheader-small">
+            <h1 class="title">Small Subheader</h1>
+        </ion-header-bar>
+        <ion-content class="has-subheader has-subheader-small has-subfooter has-footer-small has-subfooter-small">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-balanced bar-subfooter bar-subfooter-small has-footer-small">
+            <h1 class="title">Small Subfooter</h1>
+        </ion-footer-bar>
+        <ion-footer-bar class="bar-dark bar-footer-small">
+            <h1 class="title">Small Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<script id="footer-subfooter-large.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-header-bar class="bar-calm bar-subheader bar-subheader-large">
+            <h1 class="title">Large Subheader</h1>
+        </ion-header-bar>
+        <ion-content class="has-subheader has-subheader-large has-subfooter has-footer-large has-subfooter-large">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-balanced bar-subfooter bar-subfooter-large has-footer-large">
+            <h1 class="title">Large Subfooter</h1>
+        </ion-footer-bar>
+        <ion-footer-bar class="bar-dark bar-footer-large">
+            <h1 class="title">Large Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<script id="footer-subfooter-default-small.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-content class="has-subfooter has-subfooter-small">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-balanced bar-subfooter bar-subfooter-small">
+            <h1 class="title">Small Subfooter</h1>
+        </ion-footer-bar>
+        <ion-footer-bar class="bar-dark">
+            <h1 class="title">Default Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<script id="footer-subfooter-default-large.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-content class="has-subfooter has-subfooter-large">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-balanced bar-subfooter bar-subfooter-large">
+            <h1 class="title">Large Subfooter</h1>
+        </ion-footer-bar>
+        <ion-footer-bar class="bar-dark">
+            <h1 class="title">Default Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<script id="footer-subfooter-small-default.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-content class="has-subfooter has-footer-small">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-balanced bar-subfooter has-footer-small">
+            <h1 class="title">Default Subfooter</h1>
+        </ion-footer-bar>
+        <ion-footer-bar class="bar-dark bar-footer-small">
+            <h1 class="title">Small Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<script id="footer-subfooter-large-default.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-content class="has-subfooter has-footer-large">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-balanced bar-subfooter has-footer-large">
+            <h1 class="title">Default Subfooter</h1>
+        </ion-footer-bar>
+        <ion-footer-bar class="bar-dark bar-footer-large">
+            <h1 class="title">Large Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<script id="footer-subfooter-small-large.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-content class="has-subfooter has-footer-small has-subfooter-large">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-balanced bar-subfooter bar-subfooter-large has-footer-small">
+            <h1 class="title">Large Subfooter</h1>
+        </ion-footer-bar>
+        <ion-footer-bar class="bar-dark bar-footer-small">
+            <h1 class="title">Small Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<script id="footer-subfooter-large-small.html" type="text/ng-template">
+    <ion-view view-title="Header">
+        <ion-content class="has-subfooter has-footer-large has-subfooter-small">
+            <dummy-list></dummy-list>
+        </ion-content>
+        <ion-footer-bar class="bar-balanced bar-subfooter bar-subfooter-small has-footer-large">
+            <h1 class="title">Small Subfooter</h1>
+        </ion-footer-bar>
+        <ion-footer-bar class="bar-dark bar-footer-large">
+            <h1 class="title">Large Footer</h1>
+        </ion-footer-bar>
+    </ion-view>
+</script>
+
+<script src="lib/ionic/js/ionic.bundle.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
