@@ -34,8 +34,10 @@ $bar-subfooter-height:            $bar-height !default;
 
  These classes are used to absolutely position the top and bottom of the ion-content element.
 
-    .has-header { top: 44px; }
-    .has-footer { bottom: 44px; }
+```css
+.has-header { top: 44px; }
+.has-footer { bottom: 44px; }
+```
     
     +-----------------------+
     | Header 44px           |
@@ -56,10 +58,14 @@ $bar-subfooter-height:            $bar-height !default;
  When subheaders and/or subfooters are used you need to add a class(es) to the <ion-content> element so that the
  correct top and bottom values of the element can be calculated.
 
-    <ion-content class="has-subheader has-subfooter">
-    
-    .has-subheader { top: 88px; }
-    .has-subfooter { bottom: 88px; }
+```html
+<ion-content class="has-subheader has-subfooter">
+```
+
+```css       
+.has-subheader { top: 88px; }
+.has-subfooter { bottom: 88px; }
+```
     
     +-----------------------+
     | Header 44px           |
