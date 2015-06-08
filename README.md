@@ -3,7 +3,7 @@
  By default the ionic framework provides variables allowing you to override the heights of headers, subheaders,
  footers and subfooters. Those variables can be found in `lib/ionic/scss/_variables.scss`
  
-```css
+```scss
 $bar-height:                      44px !default;
 $bar-title-font-size:             17px !default;
 ...
