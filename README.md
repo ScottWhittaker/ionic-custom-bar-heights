@@ -74,5 +74,5 @@
     +-----------------------+
 
  The same convention will be used to allow for custom bar heights and subsequent calculation of content position.
- Note that the tab component also has to be considered. Tabs may positioned at the bottom or top of the application
+ Note that the tab component also has to be considered. Tabs may be positioned at the bottom or top of the application
  view as per style guides for iOS and Android.
