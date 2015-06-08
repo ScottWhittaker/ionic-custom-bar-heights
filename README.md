@@ -54,7 +54,7 @@
 
     <ion-content class="has-subheader has-subfooter">
     
-    .has-subheader { bottom: 88px; }
+    .has-subheader { top: 88px; }
     .has-subfooter { bottom: 88px; }
     
     +-----------------------+
