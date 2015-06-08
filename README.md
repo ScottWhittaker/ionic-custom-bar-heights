@@ -2,13 +2,15 @@
 
  By default the ionic framework provides variables allowing you to override the heights of headers, subheaders,
  footers and subfooters. Those variables can be found in `lib/ionic/scss/_variables.scss`
-
-    $bar-height:                      44px !default;
-    $bar-title-font-size:             17px !default;
-    ...
-    $bar-footer-height:               $bar-height !default;
-    $bar-subheader-height:            $bar-height !default;
-    $bar-subfooter-height:            $bar-height !default;
+ 
+```css
+$bar-height:                      44px !default;
+$bar-title-font-size:             17px !default;
+...
+$bar-footer-height:               $bar-height !default;
+$bar-subheader-height:            $bar-height !default;
+$bar-subfooter-height:            $bar-height !default;   
+```    
 
  Overriding anyone of these variables may suite your needs assuming that you want any of the given components to
  have a consistent height throughout your application.
@@ -26,7 +28,9 @@
  When using `<ion-header-bar>` and `<ion-footer-bar>` directives within an `<ion-view>` element the `<ion-content>` 
  element has 2 classes applied to it, `.has-header` and `.has-footer`
 
-      <ion-content class="scroll-content ionic-scroll has-header has-footer">
+```html
+<ion-content class="scroll-content ionic-scroll has-header has-footer">
+```
 
  These classes are used to absolutely position the top and bottom of the ion-content element.
 
