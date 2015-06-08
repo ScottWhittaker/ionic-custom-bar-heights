@@ -103,12 +103,28 @@ $bar-subfooter-height-large: $bar-height-large;
     line-height: $height;
 }
 
+@mixin set-subheader($height) {
+
+    height: $height;
+    top: $bar-height;
+
+    &.has-tabs-top {
+        top: $bar-height + $tabs-height;
+    }
+
+    &.bar .title {
+        @include bar-title-line-height($height);
+    }
+}
+
 // Sets the top value of the content element when a subheader is used
 @mixin has-subheader-set-content-top($height) {
 
     top: $bar-height + $height;
 
-    // TODO has-tabs
+    &.has-tabs-top {
+        top: $bar-height + $tabs-height + $height;
+    }
 }
 
 // Sets the bottom value of the content element when a footer is used without a subfooter
@@ -158,12 +174,12 @@ $bar-subfooter-height-large: $bar-height-large;
 // ----------------------------------------------------------------------
 
 .bar-subheader-small {
-    height: $bar-subfooter-height-small;
 
     &.bar .title {
-        @include bar-title-line-height($bar-subfooter-height-small);
         font-size: $bar-small-font-size;
     }
+
+    @include set-subheader($bar-subfooter-height-small);
 }
 
 .has-subheader-small {
@@ -174,11 +190,7 @@ $bar-subfooter-height-large: $bar-height-large;
 // ----------------------------------------------------------------------
 
 .bar-subheader-large {
-    height: $bar-subfooter-height-large;
-
-    &.bar .title {
-        @include bar-title-line-height($bar-subfooter-height-large);
-    }
+    @include set-subheader($bar-subfooter-height-large);
 }
 
 .has-subheader-large {
