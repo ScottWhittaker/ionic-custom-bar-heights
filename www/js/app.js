@@ -180,7 +180,7 @@ angular.module('starter', ['ionic'])
                 url: '/combos',
                 views: {
                     'tab-combos': {
-                        templateUrl: 'templates/tab-combos.html'
+                        templateUrl: 'tab-combos.html'
                     }
                 }
             })
