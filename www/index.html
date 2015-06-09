@@ -47,6 +47,66 @@
         </ion-content>
 </script>
 
+<!-- Tabs -->
+
+<script id="tabs.html" type="text/ng-template">
+    <ion-tabs class="tabs-positive tabs-text-only">
+        <ion-tab title="Footers" href="#/tab/footers">
+            <ion-nav-view name="tab-footers"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Subheaders" href="#/tab/subheaders">
+            <ion-nav-view name="tab-subheaders"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Combos" href="#/tab/combos">
+            <ion-nav-view name="tab-combos"></ion-nav-view>
+        </ion-tab>
+    </ion-tabs>
+</script>
+
+<script id="tab-combos.html" type="text/ng-template">
+    <ion-view view-title="Combinations">
+        <ion-content>
+            <ul class="list">
+                <li class="item item-divider">Footer/Subfooter Combinations</li>
+                <li class="item" ui-sref="tab.footer-subfooter-small">Small</li>
+                <li class="item" ui-sref="tab.footer-subfooter-large">Large</li>
+                <li class="item" ui-sref="tab.footer-subfooter-default-small">Default - Small</li>
+                <li class="item" ui-sref="tab.footer-subfooter-default-large">Default - Large</li>
+                <li class="item" ui-sref="tab.footer-subfooter-small-default">Small - Default</li>
+                <li class="item" ui-sref="tab.footer-subfooter-large-default">Large - Default</li>
+                <li class="item" ui-sref="tab.footer-subfooter-small-large">Small - Large</li>
+                <li class="item" ui-sref="tab.footer-subfooter-large-small">Large - Small</li>
+            </ul>
+        </ion-content>
+    </ion-view>
+</script>
+
+<script id="tab-footers.html" type="text/ng-template">
+    <ion-view view-title="Footers">
+        <ion-content>
+            <ul class="list">
+                <li class="item item-divider">Footer</li>
+                <li class="item" ui-sref="tab.footer-small">Small</li>
+                <li class="item" ui-sref="tab.footer-large">Large</li>
+                <li class="item item-divider">Subfooter</li>
+                <li class="item" ui-sref="tab.subfooter-small">Small</li>
+                <li class="item" ui-sref="tab.subfooter-large">Large</li>
+            </ul>
+        </ion-content>
+    </ion-view>
+</script>
+
+<script id="tab-subheaders.html" type="text/ng-template">
+    <ion-view view-title="Subheaders">
+        <ion-content>
+            <ul class="list">
+                <li class="item" ui-sref="tab.subheader-small">Small</li>
+                <li class="item" ui-sref="tab.subheader-large">Large</li>
+            </ul>
+        </ion-content>
+    </ion-view>
+</script>
+
 <!-- Subheaders -->
 
 <script id="subheader-small.html" type="text/ng-template">

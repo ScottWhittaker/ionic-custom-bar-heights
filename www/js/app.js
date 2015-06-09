@@ -92,7 +92,7 @@ angular.module('starter', ['ionic'])
             .state('tab', {
                 url: "/tab",
                 abstract: true,
-                templateUrl: "templates/tabs.html"
+                templateUrl: "tabs.html"
             })
 
             // footers
@@ -102,7 +102,7 @@ angular.module('starter', ['ionic'])
                 url: '/footers',
                 views: {
                     'tab-footers': {
-                        templateUrl: 'templates/tab-footers.html'
+                        templateUrl: 'tab-footers.html'
                     }
                 }
             })
@@ -150,7 +150,7 @@ angular.module('starter', ['ionic'])
                 url: '/subheaders',
                 views: {
                     'tab-subheaders': {
-                        templateUrl: 'templates/tab-subheaders.html'
+                        templateUrl: 'tab-subheaders.html'
                     }
                 }
             })
