@@ -43,6 +43,53 @@ angular.module('starter', ['ionic'])
                 templateUrl: 'subfooter-large.html'
             })
 
+            // combos
+
+            .state('footer-subfooter-default', {
+                url: '/footers/footer-subfooter-default',
+                templateUrl: 'footer-subfooter-default.html'
+            })
+
+            .state('footer-subfooter-small', {
+                url: '/footers/footer-subfooter-small',
+                templateUrl: 'footer-subfooter-small.html'
+            })
+
+            .state('footer-subfooter-large', {
+                url: '/footers/footer-subfooter-large',
+                templateUrl: 'footer-subfooter-large.html'
+            })
+
+            .state('footer-subfooter-default-small', {
+                url: '/footers/footer-subfooter-default-small',
+                templateUrl: 'footer-subfooter-default-small.html'
+            })
+
+            .state('footer-subfooter-default-large', {
+                url: '/footers/footer-subfooter-default-large',
+                templateUrl: 'footer-subfooter-default-large.html'
+            })
+
+            .state('footer-subfooter-small-default', {
+                url: '/footers/footer-subfooter-small-default',
+                templateUrl: 'footer-subfooter-small-default.html'
+            })
+
+            .state('footer-subfooter-large-default', {
+                url: '/footers/footer-subfooter-large-default',
+                templateUrl: 'footer-subfooter-large-default.html'
+            })
+
+            .state('footer-subfooter-small-large', {
+                url: '/footers/footer-subfooter-small-large',
+                templateUrl: 'footer-subfooter-small-large.html'
+            })
+
+            .state('footer-subfooter-large-small', {
+                url: '/footers/footer-subfooter-large-small',
+                templateUrl: 'footer-subfooter-large-small.html'
+            })
+
             // Tabs
             // ----------------------------------------------------------------------
 
