@@ -1,5 +1,27 @@
 # Ionic Custom Bar Heights
 
+An [ionic](http://ionicframework.com/) demo app for testing custom bar heights. Allows you to add custom 
+heights for subheaders, footers and subfooters without affecting the defaults. 
+
+If you don't have any knowledge of ionic you can [get started here](http://ionicframework.com/getting-started/).
+
+## tl;dr
+
+Grab the `scss/_custom-bars.scss` partial and include it in your app. Example templates can be found in
+`www/index.html`.
+    
+## Install
+
+Clone the repo then...
+
+    npm install
+       
+Run the app..
+       
+    ionic serve --lab
+    
+## Overview 
+
 By default the [ionic framework](http://ionicframework.com/) provides variables allowing you to override the heights
 of headers, subheaders, footers and subfooters. Those variables can be found in `lib/ionic/scss/_variables.scss`
  
@@ -84,5 +106,5 @@ correct top and bottom values of the element can be calculated.
     +-----------------------+
 
 The same convention will be used to allow for custom bar heights and subsequent calculation of content position.
-Note that the tab component also has to be considered. Tabs may be positioned at the bottom or top of the application
-view as per style guides for iOS and Android.
+Note that the tab component is also considered and will work with custom height bars. Tabs may be positioned at
+the bottom or top of the application view as per style guides for iOS and Android.
