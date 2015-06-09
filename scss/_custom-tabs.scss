@@ -253,16 +253,6 @@ $bar-subfooter-height-large: $bar-height-large;
 // Assumption is that a subfooter is always used with a footer
 // ----------------------------------------------------------------------
 
-// NOTE this use case does not work by default.
-// Tabs (bottom - iOS), default footer and default subfooter
-.has-tabs.bar-subfooter {
-    bottom: $tabs-height + $bar-height;
-}
-
-.has-tabs.has-footer.has-subfooter {
-    bottom: $tabs-height + ($bar-height * 2);
-}
-
 .bar-subfooter-small.has-footer-small {
     @include set-subfooter($bar-footer-height-small, $bar-subfooter-height-small);
 }

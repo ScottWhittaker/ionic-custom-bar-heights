@@ -45,11 +45,6 @@ angular.module('starter', ['ionic'])
 
             // combos
 
-            .state('footer-subfooter-default', {
-                url: '/footers/footer-subfooter-default',
-                templateUrl: 'footer-subfooter-default.html'
-            })
-
             .state('footer-subfooter-small', {
                 url: '/footers/footer-subfooter-small',
                 templateUrl: 'footer-subfooter-small.html'
@@ -186,15 +181,6 @@ angular.module('starter', ['ionic'])
                 views: {
                     'tab-combos': {
                         templateUrl: 'templates/tab-combos.html'
-                    }
-                }
-            })
-
-            .state('tab.footer-subfooter-default', {
-                url: '/combos/footer-subfooter-default',
-                views: {
-                    'tab-combos': {
-                        templateUrl: 'footer-subfooter-default.html'
                     }
                 }
             })

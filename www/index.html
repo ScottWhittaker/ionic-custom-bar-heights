@@ -35,7 +35,6 @@
                 <li class="item" ui-sref="subfooter-small">Small</li>
                 <li class="item" ui-sref="subfooter-large">Large</li>
                 <li class="item item-divider">Footer/Subfooter Combinations</li>
-                <li class="item" ui-sref="footer-subfooter-default">Default</li>
                 <li class="item" ui-sref="footer-subfooter-small">Small</li>
                 <li class="item" ui-sref="footer-subfooter-large">Large</li>
                 <li class="item" ui-sref="footer-subfooter-default-small">Default - Small</li>
@@ -131,26 +130,9 @@
 
 <!-- Combos -->
 
-<script id="footer-subfooter-default.html" type="text/ng-template">
-    <ion-view view-title="Header">
-        <ion-content class="has-footer has-subfooter">
-            <dummy-list></dummy-list>
-        </ion-content>
-        <ion-footer-bar class="bar-balanced bar-subfooter">
-            <h1 class="title">Default Subfooter</h1>
-        </ion-footer-bar>
-        <ion-footer-bar class="bar-dark">
-            <h1 class="title">Default Footer</h1>
-        </ion-footer-bar>
-    </ion-view>
-</script>
-
 <script id="footer-subfooter-small.html" type="text/ng-template">
     <ion-view view-title="Header">
-        <ion-header-bar class="bar-calm bar-subheader bar-subheader-small">
-            <h1 class="title">Small Subheader</h1>
-        </ion-header-bar>
-        <ion-content class="has-subheader has-subheader-small has-subfooter has-footer-small has-subfooter-small">
+        <ion-content class="has-subfooter has-footer-small has-subfooter-small">
             <dummy-list></dummy-list>
         </ion-content>
         <ion-footer-bar class="bar-balanced bar-subfooter bar-subfooter-small has-footer-small">
@@ -164,10 +146,7 @@
 
 <script id="footer-subfooter-large.html" type="text/ng-template">
     <ion-view view-title="Header">
-        <ion-header-bar class="bar-calm bar-subheader bar-subheader-large">
-            <h1 class="title">Large Subheader</h1>
-        </ion-header-bar>
-        <ion-content class="has-subheader has-subheader-large has-subfooter has-footer-large has-subfooter-large">
+        <ion-content class="has-subfooter has-footer-large has-subfooter-large">
             <dummy-list></dummy-list>
         </ion-content>
         <ion-footer-bar class="bar-balanced bar-subfooter bar-subfooter-large has-footer-large">
