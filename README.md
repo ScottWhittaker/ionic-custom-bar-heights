@@ -4,6 +4,9 @@ An [ionic](http://ionicframework.com/) demo app for testing custom bar heights. 
 heights for subheaders, footers and subfooters without affecting the defaults. If you are not familiar with
 ionic you can [get started here](http://ionicframework.com/getting-started/).
 
+See the [demo](http://scottwhittaker.github.io/ionic-custom-bar-heights) and test in
+[device mode](https://developer.chrome.com/devtools/docs/device-mode) for the best experience.
+
 ## tl;dr
 
 Grab the `scss/_custom-bars.scss` partial and include it in your app. Example templates can be found in
