@@ -106,7 +106,6 @@ $bar-subfooter-height-large: $bar-height-large;
 @mixin set-subheader($height) {
 
     height: $height;
-    top: $bar-height;
 
     &.has-tabs-top {
         top: $bar-height + $tabs-height;

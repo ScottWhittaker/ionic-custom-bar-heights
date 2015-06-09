@@ -1,6 +1,10 @@
 angular.module('starter', ['ionic'])
 
-    .config(function($stateProvider, $urlRouterProvider) {
+    .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
+        // Don't cache any views. As we are switching between tabbed and no tabbed views for testing we do not
+        // want any tab related classes to be in teh DOM when testing teh non-tabbed views.
+        $ionicConfigProvider.views.maxCache(0);
 
         $stateProvider
 
