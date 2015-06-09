@@ -253,7 +253,8 @@ $bar-subfooter-height-large: $bar-height-large;
 // Assumption is that a subfooter is always used with a footer
 // ----------------------------------------------------------------------
 
-.bar-subfooter-small.has-footer-small {
+// Small footer, small subfooter
+.has-footer-small.bar-subfooter-small.bar-subfooter.bar-footer {
     @include set-subfooter($bar-footer-height-small, $bar-subfooter-height-small);
 }
 
@@ -261,7 +262,8 @@ $bar-subfooter-height-large: $bar-height-large;
     @include set-content-bottom-for-subfooter($bar-footer-height-small, $bar-subfooter-height-small);
 }
 
-.bar-subfooter-large.has-footer-large {
+// Large footer, large subfooter
+.has-footer-large.bar-subfooter-large.bar-subfooter.bar-footer {
     @include set-subfooter($bar-footer-height-large, $bar-subfooter-height-large);
 }
 
@@ -269,10 +271,34 @@ $bar-subfooter-height-large: $bar-height-large;
     @include set-content-bottom-for-subfooter($bar-footer-height-large, $bar-subfooter-height-large);
 }
 
+// Small footer, default subfooter
+.has-footer-small.bar-subfooter.bar-footer {
+    @include set-subfooter($bar-footer-height-small, $bar-height);
+}
 
+.has-subfooter.has-footer-small {
+    @include set-content-bottom-for-subfooter($bar-footer-height-small, $bar-height);
+}
 
+// Large footer, default subfooter
+.has-subfooter.has-footer-large {
+    @include set-content-bottom-for-subfooter($bar-footer-height-large, $bar-height);
+}
 
+// Small footer, large subfooter
+.has-footer-small.bar-subfooter-large.bar-subfooter.bar-footer {
+    @include set-subfooter($bar-footer-height-small, $bar-subfooter-height-large);
+}
 
+.has-subfooter.has-footer-small.has-subfooter-large {
+    @include set-content-bottom-for-subfooter($bar-footer-height-small, $bar-subfooter-height-large);
+}
 
+// Large footer, small subfooter
+.has-footer-large.bar-subfooter-small.bar-subfooter.bar-footer {
+    @include set-subfooter($bar-footer-height-large, $bar-subfooter-height-small);
+}
 
-
+.has-subfooter.has-footer-large.has-subfooter-small {
+    @include set-content-bottom-for-subfooter($bar-footer-height-large, $bar-subfooter-height-small);
+}
