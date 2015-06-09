@@ -1,9 +1,8 @@
 # Ionic Custom Bar Heights
 
 An [ionic](http://ionicframework.com/) demo app for testing custom bar heights. Allows you to add custom 
-heights for subheaders, footers and subfooters without affecting the defaults. 
-
-If you don't have any knowledge of ionic you can [get started here](http://ionicframework.com/getting-started/).
+heights for subheaders, footers and subfooters without affecting the defaults. If you are not familiar ionic
+you can [get started here](http://ionicframework.com/getting-started/).
 
 ## tl;dr
 
@@ -12,11 +11,11 @@ Grab the `scss/_custom-bars.scss` partial and include it in your app. Example te
     
 ## Install
 
-Clone the repo then...
+Clone the repo.
 
     npm install
        
-Run the app..
+Run the application.
        
     ionic serve --lab
     
