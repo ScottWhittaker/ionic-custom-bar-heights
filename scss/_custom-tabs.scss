@@ -117,59 +117,56 @@ $bar-subfooter-height-large: $bar-height-large;
 }
 
 // Sets the top value of the content element when a subheader is used
-@mixin has-subheader-set-content-top($height) {
+@mixin set-content-top-for-subheader($subheader-height) {
 
-    top: $bar-height + $height;
+    top: $bar-height + $subheader-height;
 
     &.has-tabs-top {
-        top: $bar-height + $tabs-height + $height;
+        top: $bar-height + $tabs-height + $subheader-height;
     }
 }
 
 // Sets the bottom value of the content element when a footer is used without a subfooter
-@mixin has-footer-set-content-bottom($height) {
+@mixin set-content-bottom-for-footer($footer-height) {
 
-    bottom: $height;
+    bottom: $footer-height;
 
     &.has-tabs {
-        bottom: $tabs-height + $height;
+        bottom: $tabs-height + $footer-height;
     }
 
     &.has-tabs-top {
-        bottom: $height;
+        bottom: $footer-height;
     }
 }
 
-@mixin set-subfooter($height) {
+// Sets the subfooter height and position
+@mixin set-subfooter($footer-height, $subfooter-height) {
 
     &.bar-footer {
-        height: $height;
+        height: $subfooter-height;
     }
 
     &.has-tabs {
-        bottom: $tabs-height + $bar-height;
+        bottom: $tabs-height + $footer-height;
     }
 
     &.bar .title {
-        @include bar-title-line-height($height);
+        @include bar-title-line-height($subfooter-height);
     }
 }
 
-// Sets the bottom value of the content element when a subfooter is used with a footer
-@mixin has-subfooter-set-content-bottom($height) {
+// Sets the bottom value of the content element when a footer AND subfooter are used
+@mixin set-content-bottom-for-subfooter($footer-height, $subfooter-height) {
 
-    bottom: $bar-height + $height;
+    bottom: $footer-height + $subfooter-height;
 
     &.has-tabs {
-        bottom: $tabs-height + $bar-height + $height;
-    }
-
-    &.has-tabs-top {
-        bottom: $bar-height + $height;
+        bottom: $tabs-height + $footer-height + $subfooter-height;
     }
 }
 
-// bar-subheader-small
+// SUB-HEADERS
 // ----------------------------------------------------------------------
 
 .bar-subheader-small {
@@ -182,21 +179,18 @@ $bar-subfooter-height-large: $bar-height-large;
 }
 
 .has-subheader-small {
-    @include has-subheader-set-content-top($bar-subfooter-height-small);
+    @include set-content-top-for-subheader($bar-subfooter-height-small);
 }
-
-// bar-subheader-large
-// ----------------------------------------------------------------------
 
 .bar-subheader-large {
     @include set-subheader($bar-subfooter-height-large);
 }
 
 .has-subheader-large {
-    @include has-subheader-set-content-top($bar-subfooter-height-large);
+    @include set-content-top-for-subheader($bar-subfooter-height-large);
 }
 
-// bar-footer-small
+// FOOTERS
 // ----------------------------------------------------------------------
 
 .bar-footer-small {
@@ -212,11 +206,8 @@ $bar-subfooter-height-large: $bar-height-large;
 }
 
 .has-footer-small {
-    @include has-footer-set-content-bottom($bar-footer-height-small);
+    @include set-content-bottom-for-footer($bar-footer-height-small);
 }
-
-// bar-footer-large
-// ----------------------------------------------------------------------
 
 .bar-footer-large {
 
@@ -230,36 +221,65 @@ $bar-subfooter-height-large: $bar-height-large;
 }
 
 .has-footer-large {
-    @include has-footer-set-content-bottom($bar-footer-height-large);
+    @include set-content-bottom-for-footer($bar-footer-height-large);
 }
 
-// bar-subfooter-small
-// Assumption here is that a subfooter is only used with a footer
+// SUB-FOOTERS
+// Assumption is that a subfooter is always used with a footer
 // ----------------------------------------------------------------------
 
 .bar-subfooter-small {
 
-    @include set-subfooter($bar-footer-height-small);
+    @include set-subfooter($bar-height, $bar-footer-height-small);
 
     &.bar .title {
         font-size: $bar-small-font-size;
     }
 }
 
-.has-subfooter-small {
-    @include has-subfooter-set-content-bottom($bar-subfooter-height-small);
+.has-footer.has-subfooter.has-subfooter-small {
+    @include set-content-bottom-for-subfooter($bar-height, $bar-subfooter-height-small);
 }
-
-// bar-subfooter-large
-// ----------------------------------------------------------------------
 
 .bar-subfooter-large {
-    @include set-subfooter($bar-footer-height-large);
+    @include set-subfooter($bar-height, $bar-subfooter-height-large);
 }
 
-.has-subfooter-large {
-    @include has-subfooter-set-content-bottom($bar-subfooter-height-large);
+.has-footer.has-subfooter.has-subfooter-large {
+    @include set-content-bottom-for-subfooter($bar-height, $bar-subfooter-height-large);
 }
+
+// COMBOS
+// Assumption is that a subfooter is always used with a footer
+// ----------------------------------------------------------------------
+
+// NOTE this use case does not work by default.
+// Tabs (bottom - iOS), default footer and default subfooter
+.has-tabs.bar-subfooter {
+    bottom: $tabs-height + $bar-height;
+}
+
+.has-tabs.has-footer.has-subfooter {
+    bottom: $tabs-height + ($bar-height * 2);
+}
+
+.bar-subfooter-small.has-footer-small {
+    @include set-subfooter($bar-footer-height-small, $bar-subfooter-height-small);
+}
+
+.has-subfooter.has-footer-small.has-subfooter-small {
+    @include set-content-bottom-for-subfooter($bar-footer-height-small, $bar-subfooter-height-small);
+}
+
+.bar-subfooter-large.has-footer-large {
+    @include set-subfooter($bar-footer-height-large, $bar-subfooter-height-large);
+}
+
+.has-subfooter.has-footer-large.has-subfooter-large {
+    @include set-content-bottom-for-subfooter($bar-footer-height-large, $bar-subfooter-height-large);
+}
+
+
 
 
 
