@@ -9,8 +9,9 @@ See the [demo](http://scottwhittaker.github.io/ionic-custom-bar-heights) and tes
 
 ## tl;dr
 
-Grab the `scss/_custom-bars.scss` partial and include it in your app. Example templates can be found in
-`www/index.html`.
+Grab the [`_custom-bars.scss`](https://github.com/ScottWhittaker/ionic-custom-bar-heights/blob/master/scss/_custom-bars.scss)
+partial and include it in your app. Example templates can be found in
+[`index.html`](https://github.com/ScottWhittaker/ionic-custom-bar-heights/blob/master/www/index.html).
     
 ## Install
 
